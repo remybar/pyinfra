@@ -83,6 +83,10 @@ class Host(object):
         return self.name
 
     @property
+    def connected(self):
+        return self.connection is not None
+
+    @property
     def host_data(self):
         return self.inventory.get_host_data(self.name)
 
